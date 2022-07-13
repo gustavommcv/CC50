@@ -27,11 +27,6 @@ int main(void){
         c = 0;
     }
 
-    printf("\nDigit printing: before ");
-    for (int s = i - 1; s >= 0; s--){
-        printf("%d ", digit[s]);
-    }
-
     //Assigning the digits that have not been multiplied to another variable
     int h = 0;
     for (int s = i - 2; s >= 0; s-=2){
@@ -42,21 +37,6 @@ int main(void){
     //Multiplying by 2 
     for (int s = i - 1; s >= 0; s-=2){
         digit[s] *= 2;
-    }
-
-    //Digit printing
-    printf("\n\nDigit printing: after  ");
-    for (int s = i - 1; s >= 0; s--){
-        printf("%d ", digit[s]);
-    }
-
-    printf("\n\nNumber of digits: ");
-    printf("%i", i);
-
-    //2-by-2 digit printing
-    printf("\n\n2-by-2 digit printing: ");
-    for (int s = i - 1; s >= 0; s-=2){
-        printf("%d ", digit[s]);
     }
 
     //Separating the product digits
@@ -72,41 +52,25 @@ int main(void){
         }
     }
 
-    //print auxiliary variable
-    printf("\n\nPrint auxiliary variable: ");
-    for (size_t j = 0; j < l; j++){
-        printf("%d ", aux[j]);
-    }
-
-    //print 2nd auxiliary variable
-    printf("\n\nPrint 2nd auxiliary variable: ");
-    for (size_t j = 0; j < l; j++){
-        printf("%d ", aux2[j]);
-    }
-
     //Taking the sum value
     int sum = 0;
     for (size_t j = 0; j < l; j++){
         sum += aux[j] + aux2[j];
     }
 
-    printf("\n\nSum: %d\n\n", sum);
-
     if(sum % 10 == 0){
         if(c == 1){
-            printf("\nAmerican Express");
+            printf("\nAmerican Express\n\n");
         }else if(c == 2){
-            printf("\nMastercard");
+            printf("\nMastercard\n\n");
         }else if(c == 3){
-            printf("\nVisa");
+            printf("\nVisa\n\n");
         }else{
-            printf("\nInvalid card");
+            printf("\nInvalid card\n\n");
         }
     }else{
-        printf("\nInvalid card");
+        printf("\nInvalid card\n\n");
     }
-
-    printf("\n\n");
 
     system("pause");
 
