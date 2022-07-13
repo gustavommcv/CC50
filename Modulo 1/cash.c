@@ -36,5 +36,8 @@ int main(void){
 
     printf("Total of coins: %i\n\n25: %i\n10: %i\n5: %i\n1: %i", coins, c25, c10, c5, c1);
 
+    printf("Press any key to continue . . . ");
+    getchar();
+    
     return 0;
 }

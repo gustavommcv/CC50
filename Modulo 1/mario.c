@@ -18,4 +18,9 @@ int main(){
         }
         printf("\n");
     }
+
+    printf("Press any key to continue . . . ");
+    getchar();
+
+    return 0;
 }

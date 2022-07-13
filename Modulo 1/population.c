@@ -23,5 +23,8 @@ int main(void){
 
     printf("Number of years: %d", i);
 
+    printf("Press any key to continue . . . ");
+    getchar();
+    
     return 0;
 }
