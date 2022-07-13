@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
     
@@ -26,8 +27,7 @@ int main(void){
         printf("\n");
     }
 
-    printf("Press any key to continue . . . ");
-    getchar();
+    system("pause");
 
     return 0;
 }

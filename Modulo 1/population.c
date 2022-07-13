@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 int main(void){
 
@@ -23,8 +24,7 @@ int main(void){
 
     printf("Number of years: %d", i);
 
-    printf("Press any key to continue . . . ");
-    getchar();
+    system("pause");
     
     return 0;
 }
