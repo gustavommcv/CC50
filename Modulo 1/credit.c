@@ -95,7 +95,7 @@ int main(void){
         if(c == 1){
             printf("\nAmerican Express");
         }else if(c == 2){
-            printf("\nMaster Card");
+            printf("\nMastercard");
         }else if(c == 3){
             printf("\nVisa");
         }else{
@@ -106,6 +106,9 @@ int main(void){
     }
 
     printf("\n\n");
+
+    printf("Press any key to continue . . . ");
+    getchar();
 
     return 0;
 }
