@@ -108,7 +108,7 @@ int main(void){
     printf("\n\n");
 
     printf("Press any key to continue . . . ");
-    getchar();
+    scanf("%c");
 
     return 0;
 }
