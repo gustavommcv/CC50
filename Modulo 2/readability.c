@@ -17,10 +17,10 @@ INCOMPLETE
 int main(void){
     int letters = 0, words = 0, sentences = 0;
     float index = 0;
-    char text[300] = {'\0'};
+    char text[1000] = {'\0'};
 
     printf("Text: ");
-    scanf(" %[^\n]", text);
+    scanf("%[^\n]", text);
 
     printf("\n\n%s\n\n", text);
 
