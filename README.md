@@ -25,4 +25,4 @@ Linguagens incluem:
 Sets de Problemas inspirados no mundo real: domínios da biologia, criptografia, finanças, ciência forense, e jogos. Projetado para todos os interessados, com ou sem experiência anterior em programação.
 
 ##### Observação
- - Tentei fazer os códigos utilizando apenas as bibliotecas já inclusas no compilador.
+ - Tentei fazer os códigos utilizando apenas as bibliotecas já inclusas no meu compilador.
