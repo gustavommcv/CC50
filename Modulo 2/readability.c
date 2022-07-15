@@ -22,19 +22,11 @@ int main(void){
     printf("Text: ");
     scanf("%[^\n]", text);
 
-    printf("\n\n%s\n\n", text);
-
     letters = contletters(text);
     words = contwords(text);
     sentences = contsentences(text);
 
     index = 0.0588 * ((letters * 100) / words) - 0.296 * ((sentences * 100) / words) - 15.8;
-
-    printf("\n%d\n", letters);
-    printf("\n%d\n", words);
-    printf("\n%d\n", sentences);
-    printf("\n%d\n", lround(index));
-    printf("\n%f\n", index);
 
     if(lround(index) >= 16){
         printf("\nGrade 16+");
