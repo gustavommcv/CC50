@@ -10,10 +10,6 @@ int contsentences();
 
 //=========================================================================
 
-/*
-INCOMPLETE
-*/
-
 int main(void){
     int letters = 0, words = 0, sentences = 0;
     float index = 0;
