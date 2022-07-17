@@ -7,8 +7,6 @@ int main(int argc, char *argv[]){
 
     if(argc == 2){
 
-        int status = 0;
-
         //checking if the user has entered a number
     	for(int i = 0, n = strlen(argv[1]), h = 0; i < n; i++ ){
             if(!isdigit(argv[1][i])){
