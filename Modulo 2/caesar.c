@@ -3,49 +3,43 @@
 #include <string.h>
 #include <ctype.h>
 
-/*
-INCOMPLETE
-*/
-
 int main(int argc, char *argv[]){
 
     if(argc == 2){
 
         int status = 0;
 
-    	for(int i = 0, n = strlen(argv[1]); i < n; i++ ){
+        //checking if the user has entered a number
+    	for(int i = 0, n = strlen(argv[1]), h = 0; i < n; i++ ){
             if(!isdigit(argv[1][i])){
-                status = 1;
+                printf("\nUsage: .\\caesar key\n\n");
+                return 2;
             }
         }
 
-        printf("\n\n%d\n\n", status);
+            char text[300] = {'\0'};
+            int key = atoi(argv[1]);
 
-        if(status == 0){
-        char text[300] = {'\0'};
+            printf("Plaintext: ");
+            scanf(" %[^\n]", text);
 
-        int key = atoi(argv[1]);
-
-        printf("Plaintext: ");
-        scanf(" %[^\n]", text);
-
-        for (size_t i = 0, n = strlen(text); i < n; i++){
-            if ((text[i] >= 'A' && text[i] <= 'Z') || (text[i] >= 'a' && text[i] <= 'z')){
-                text[i] += key;
+            //encrypting
+            for (size_t i = 0, n = strlen(text); i < n; i++){
+                if (isalpha(text[i])){
+                    if (isupper(text[i])){
+                        text[i] = (text[i] - 'A' + key) % 26 + 'A';
+                    }else{
+                        text[i] = (text[i] - 'a' + key) % 26 + 'a';
+                    }
+                }
             }
-        }
 
-        printf("Ciphertext: %s", text);
+            printf("Ciphertext: %s", text);
 
-        return 0;
-
-        }else{
-            printf("Usage: .\\caesar key\n");
-            return 2;
-        }
+            return 0;
 
     }else{
-        printf("Usage: .\\caesar key\n");
+        printf("\nUsage: .\\caesar key\n\n");
         return 1;
     }
 }
