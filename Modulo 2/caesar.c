@@ -9,38 +9,24 @@ INCOMPLETE
 
 int main(int argc, char *argv[]){
 
-	int status = 0;
+    if(argc == 2){
 
-	for(int i = 0; argv[i] != '\0'; i++)
-	{
-		if (status==1){
-            break;
+        int status = 0;
+
+    	for(int i = 0, n = strlen(argv[1]); i < n; i++ ){
+            if(!isdigit(argv[1][i])){
+                status = 1;
+            }
         }
-		while(isdigit(argv[i])){
-			printf("%c", argv[i]);
-			
-			if(isdigit(argv[i + 1])){
-				status = 1;
-			}
-			i++;
-		}
-	}
 
-    printf("%d", status);
+        printf("\n\n%d\n\n", status);
 
-    if(argc > 2 || argc < 2){
-        printf("Usage: .\\caesar key");
-
-    }else if(status == 1){
-        printf("Usage: .\\caesar key");
-
-    }else{
+        if(status == 0){
         char text[300] = {'\0'};
-        int key = 0;
 
-        key = atoi(argv[1]);
+        int key = atoi(argv[1]);
 
-        printf("Text: ");
+        printf("Plaintext: ");
         scanf(" %[^\n]", text);
 
         for (size_t i = 0, n = strlen(text); i < n; i++){
@@ -49,8 +35,17 @@ int main(int argc, char *argv[]){
             }
         }
 
-        printf("%s", text);
-    }
+        printf("Ciphertext: %s", text);
 
-    return 0;
+        return 0;
+
+        }else{
+            printf("Usage: .\\caesar key\n");
+            return 2;
+        }
+
+    }else{
+        printf("Usage: .\\caesar key\n");
+        return 1;
+    }
 }
