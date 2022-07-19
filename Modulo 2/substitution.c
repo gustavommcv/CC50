@@ -50,32 +50,24 @@ int main(int argc, char *argv[]){
         printf("Plaintext: ");
         scanf(" %[^\n]", text);
 
-        for (int i = 0; i < n; i++)
-            {
-                if (isupper(text[i]) != 0)
-                {
-                    for (int j = 0; j < 26; j++)
-                    {
-                        if(abc[j] == tolower(text[i]))
-                        {
+        for (int i = 0; i < n; i++){
+                if (isupper(text[i]) != 0){
+                    for (int j = 0; j < 26; j++){
+                        if(abc[j] == tolower(text[i])){
                             ciphertext[i] = toupper(key[j]);
                             break;
                         }
                     }
-                }
-                else if (islower(text[i]) != 0)
-                {
-                    for (int j = 0; j < 26; j++)
-                    {
-                        if(abc[j] == text[i])
-                        {
+
+                }else if (islower(text[i]) != 0){
+                    for (int j = 0; j < 26; j++){
+                        if(abc[j] == text[i]){
                             ciphertext[i] = tolower(key[j]);
                             break;
                         }
                     }
-                }
-                else
-                {
+                    
+                }else{
                     ciphertext[i] = text[i];
                 }
             }
