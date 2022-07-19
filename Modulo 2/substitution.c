@@ -8,11 +8,10 @@ INCOMPLETE
 */
 
 int main(int argc, char *argv[]){
-    
+
     if(argc == 2){
         int n = strlen(argv[1]);
         char text[300] = {'\0'}, ciphertext[300] = {'\0'}, abc[26] = {"abcdefghijklmnopqrstuvwxyz"}, key[26];
-
 
         for (size_t i = 0; i < n; i++){
             key[i] = argv[1][i];
@@ -31,11 +30,9 @@ int main(int argc, char *argv[]){
             }
         }
 
-        printf("\n\n%d\n\n", n);
-
 /*
         int h = 0;
-        Checking whether argv contains repeated characters
+        //Checking whether argv contains repeated characters
         for (int i = 0; i < n; i++){
             for (int j = i + 1; j < n; j++){
                 if (isupper(argv[1][i]) == isupper(argv[1][j])){
@@ -45,11 +42,13 @@ int main(int argc, char *argv[]){
                 }
             }
         }
+
 */
 
         printf("Plaintext: ");
         scanf(" %[^\n]", text);
 
+        //Encrypting
         for (int i = 0; i < n; i++){
                 if (isupper(text[i]) != 0){
                     for (int j = 0; j < 26; j++){
@@ -66,7 +65,7 @@ int main(int argc, char *argv[]){
                             break;
                         }
                     }
-                    
+
                 }else{
                     ciphertext[i] = text[i];
                 }
@@ -80,6 +79,6 @@ int main(int argc, char *argv[]){
         printf("\nUsage: b .\\substitution key\n\n");
         return 1;
     }
-    
+
     return 0;
 }
